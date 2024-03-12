@@ -1,24 +1,37 @@
-  /* Create an accessible color palette using var()function */
+/* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
+
+  :root {
+    --beige: #fceeb8;
+    --navy: #120f6e;
+    --green: #4CAF50;
+    --white: #ffffff;
+    --purple: #702082;
+  }
+
+  body {
+    font-family: Montserrat, serif;
+    background-color: var(--navy);
+  }
   
   form {
     display: grid;
     grid-template-columns: 50% 50%;
-    border: 1px solid #ccc;
+    border: 1px solid --var(white);
     border-radius: 16px;
     width:70%;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #702082;
-    background: #CFC096;
+    color: var(--purple);
+    background-color: var(--beige);
   }
 
   .radio {
     grid-column-start: 1;
     grid-column-end: 3;
     /* background: #575294; */
-    color: #702082;
+    color: var(--purple);
   }
 
   #name {
@@ -26,8 +39,8 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
-    color: #9B9A6D;
+    background: var(--beige);
+    color: var(--navy);
   }
 
   #message {
@@ -39,20 +52,20 @@
   input,
   textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--white);
     width: 100%;
   }
 
   input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: --var(green);
+    color: --var(white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
 
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: --var(green);
   }
